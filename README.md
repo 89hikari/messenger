@@ -2,6 +2,8 @@
 
 This application on react, backend was created with Django use JWT tokens.
 
+https://github.com/evrudenko/messenger - backend
+
 ## Available Scripts
 
 In the project directory, you can run:
