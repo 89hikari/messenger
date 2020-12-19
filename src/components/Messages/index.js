@@ -14,12 +14,13 @@ const AlwaysScrollToBottom = () => {
 const Messages = ({ blockRef, items, contactData, refresh, getMessages, me, notMe}) => {
 
         let messages = contactData.state.messages
-        console.log(contactData.state.id)
+
         return (
         <div className="messages">
-          {contactData.state.contact_name !== '' ?  messages.map(item =>
+          {contactData.state.contact_name !== '' && messages ?  messages.map(item =>
              <Message id={item.recipient_id == contactData.state.id ? contactData.state.id : item.recipient_id} 
-             text={item.text} datetime={item.datetime} 
+             text={item.text} 
+             datetime={item.datetime} 
              isMe={item.recipient_id == contactData.state.id ? false : true} 
              contactData={contactData} 
              avatar={contactData.state.contact_avatar}

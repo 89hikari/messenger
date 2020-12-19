@@ -11,7 +11,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayed_form: 'login',
+      displayed_form: '',
       logged_in: localStorage.getItem('token') == undefined ? false : true,
       username: '',
       id: null,
@@ -108,7 +108,7 @@ class App extends Component {
             }
           }).then(res => res.json())
           .then(json => {
-            this.setState({ messages: json });
+            this.setState({ messages: json, last_messages: json.datetime });
             return json;
     })
   }

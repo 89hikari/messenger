@@ -12,7 +12,7 @@ const Message = ({id, text, datetime, avatar, isMe, contactData, user}) => {
         return (
             <div className={classNames("message", {"message--isme" : isMe})}>
                 <div className="message__avatar">
-                    <Avatar user={user} id={id}/>
+                   { <Avatar user={user} id={id}/>}
                 </div>
                 
                 <div className="message__content">

@@ -6,6 +6,7 @@ import { TeamOutlined, FormOutlined } from "@ant-design/icons";
 import './Sidebar.scss'
 
 const Sidebar = (props) => {
+
     const { Search } = Input;
     const onSearch = value => console.log(value);
     const [visible, setVisible] = useState(false);
@@ -17,14 +18,6 @@ const Sidebar = (props) => {
     ///////////////////////
 
     const [user, setUser] = React.useState("");
-
-    function wait(ms){
-        var start = new Date().getTime();
-        var end = start;
-        while(end < start + ms) {
-          end = new Date().getTime();
-       }
-     }
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -40,7 +33,6 @@ const Sidebar = (props) => {
     }
 
     function handleChange(event) {
-        console.log(user)
         setUser(event.target.value);
     }
 
@@ -62,6 +54,8 @@ const Sidebar = (props) => {
                             contactData={props.contactData}
                             contactName={props.contactName}
                             items={props.users}
+                            messages={props.messages}
+                            lastMessageData={props.lastMessageData}
                         />
                     </div>
                     <Modal

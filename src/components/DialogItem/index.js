@@ -16,7 +16,7 @@ const getMessageTime = created_at => {
 
 
 // один элемент в баре слева
-const DialogItem = ({ id, user, avatar, created_at, unreaded, isMe, text, onSelect, contactName}) => {
+const DialogItem = ({ id, user, avatar, created_at, unreaded, isMe, text, onSelect, contactName, messages, lastMessageData}) => {
     const setData = () => {
         contactName.setState( {contact_name: user, contact_id: id, contact_avatar: avatar } )
         contactName.getMessages(id)
@@ -33,9 +33,8 @@ const DialogItem = ({ id, user, avatar, created_at, unreaded, isMe, text, onSele
                         </span>
                     </div>
                     <div className="dialogs__item-info-bottom">
-                        <p>{text}</p>
-                        {isMe && <IconReaded isMe={true} isReaded={true} />}
-                        {unreaded > 0 && <span className="dialogs__item-info-bottom-counter">{unreaded}</span>}
+                        <p>{messages}</p>
+                       
                     </div>
                 </div>
             </div>

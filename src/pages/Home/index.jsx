@@ -13,7 +13,7 @@ import { useState } from 'react';
 const Home = (props) => (
     <section className="home">
         <div className="chat">
-            <Sidebar users={props.getContacts} contactName={props.contactName} contactData={props.contactData} addUser={props.addUser} getAllUsers={props.getAllUsers} refresh={props.refreshContacts}/>
+            <Sidebar users={props.getContacts} lastMessageData={props.contactData.state.messages} messages={props.contactData.state.contacts} contactName={props.contactName} contactData={props.contactData} addUser={props.addUser} getAllUsers={props.getAllUsers} refresh={props.refreshContacts}/>
 
             <div className="chat__dialog">
                 <div className="chat__dialog-header">
