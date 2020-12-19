@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# React messenger
+
+This application on react, backend was created with Django use JWT tokens.
 
 ## Available Scripts
 
