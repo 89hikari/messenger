@@ -2,6 +2,8 @@
 
 This application on react, backend was created with Django use JWT tokens.
 
+https://chat-app1-d20f1.web.app/ - avalible application
+
 https://github.com/evrudenko/messenger - backend
 
 ## Available Scripts
